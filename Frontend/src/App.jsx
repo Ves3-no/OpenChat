@@ -51,7 +51,7 @@ function App() {
   )
 }
 async function getMessage(message, setMessage, setMessages, username){
-    const data = await fetch("https://localhost:7249/Message", {
+    const data = await fetch("https://backendop.ves3.no/Message", {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -63,7 +63,7 @@ async function getMessage(message, setMessage, setMessages, username){
     })
 }
 async function sendMessage(message, setMessage, setMessages, username){
-    await fetch("https://localhost:7249/Message", {
+    await fetch("https://backendop.ves3.no/Message", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
