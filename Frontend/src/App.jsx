@@ -7,7 +7,11 @@ function App() {
   const [username, setUsername] = useState("")
   const [userTrue, setUserTrue] = useState(false)
    useEffect(()=> {
-      getMessage(message, setMessage, setMessages, username)
+      const interval = setInterval(
+        ()=> {
+          getMessage(message, setMessage, setMessages, username)
+        }, 3000) 
+        return () => clearInterval(interval)
     }, [])
   return (
     <div className='bg-slate-800 flex items-center justify-center h-screen w-full'>
