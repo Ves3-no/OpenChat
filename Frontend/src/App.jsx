@@ -15,9 +15,9 @@ function App() {
     }, [])
   return (
     <div className='bg-slate-800 flex items-center justify-center h-screen w-full'>
-    <div className='flex items-center flex-col aspect-[6/8] bg-gray-600 rounded-lg min-w-lg' >
+    <div className='flex items-center flex-col aspect-[6/8] bg-gray-600 rounded-lg min-w-lg max-h-[85vh] max-w-[90%] overflow-hidden' >
       <h1 className='text-gray-50 font-medium text-4xl flex-2 items-center flex text-shadow-md text-shadow-slate-800 font-[cause]'>Open chat</h1>
-      <div className='flex flex-col gap-4 flex-10 border border-slate-200 w-[75%] rounded-lg p-5 overflow-y-scroll max-h-[80%]' >
+      <div className='flex flex-col gap-4 flex-10 border border-slate-200 w-[75%] rounded-lg p-5 overflow-y-scroll' >
           {messages.map((message, index) => (
             message.username == username ? 
             <div className='bg-pink-200 p-3 rounded-2xl font-[cause] text-left self-end w-fit min-w-40 gap-1 flex flex-col'>
